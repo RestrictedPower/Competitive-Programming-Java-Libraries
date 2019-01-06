@@ -1,4 +1,4 @@
-	public static class Util{
+public static class Util{
 	    static boolean isPrime(int n) { 
 	        if (n <= 1) return false; 
 	        if (n <= 3) return true; 
@@ -13,8 +13,7 @@
 			int l=0,h=a.length-1;
 			while(l<h) {
 				int mid = (l+h)/2;
-				if(a[mid]==v) return mid;
-				if(v>a[mid]) l = mid+1;
+				if(v>=a[mid]) l = mid+1;
 				else h = mid-1;
 			}
 			if(v<a[l]) return l-1;
@@ -25,9 +24,8 @@
 			int l=0,h=a.length-1;
 			while(l<h) {
 				int mid = (l+h)/2;
-				if(a[mid]==v) return mid;
-				if(v>a[mid]) l = mid+1;
-				else h = mid-1;
+				if(v<=a[mid]) h = mid-1;
+				else l = mid+1;
 			}
 			if(v>a[l]) return l+1;
 			return l;
