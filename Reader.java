@@ -41,7 +41,7 @@
 				}
 			return st.nextToken();
 		}
-		public static void readLine() {
+		private static void readLine() {
 			try {
 				st = new StringTokenizer(br.readLine());
 			} catch (Exception e) {
