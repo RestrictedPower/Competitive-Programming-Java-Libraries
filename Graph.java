@@ -19,7 +19,7 @@
 			visited[cur] = true;
 			for (Integer v : con[cur]) {
 				if (!visited[v]) {
-					dfs(cur);
+					dfs(v);
 				}
 			}
 		}
