@@ -1,4 +1,4 @@
-public static class Util{
+public class Util{
 	    static boolean isPrime(int n) { 
 	        if (n <= 1) return false; 
 	        if (n <= 3) return true; 
@@ -8,27 +8,27 @@ public static class Util{
 	            return false; 
 	        return true; 
 	    }
-		public static int upperBound(int[] a, int v) {
-			if(a[0]>v) return -1;
-			int l=0,h=a.length-1;
+		public static int upperBound(long[] a, long v) {
+			int l=0, h=a.length-1, ans = -1;
 			while(l<h) {
 				int mid = (l+h)/2;
-				if(v>=a[mid]) l = mid+1;
-				else h = mid-1;
+				if(a[mid]<=v) {
+					ans = mid;
+					l = mid+1;
+				}else h = mid-1;
 			}
-			if(v<a[l]) return l-1;
-			return l;
+			return ans;
 		}
-		public static int lowerBound(int[] a, int v) {
-			if(a[a.length-1]<v) return -1;
-			int l=0,h=a.length-1;
+		public static int lowerBound(long[] a, long v) {
+			int l=0, h=a.length-1, ans = -1;
 			while(l<h) {
 				int mid = (l+h)/2;
-				if(v<=a[mid]) h = mid-1;
-				else l = mid+1;
+				if(v<=a[mid]) {
+					ans = mid;
+					h = mid-1;
+				}else l = mid-1;
 			}
-			if(v>a[l]) return l+1;
-			return l;
+			return ans;
 		}
 	    public static boolean[] getSieve(int n) {
 	        boolean[] isPrime = new boolean[n+1];
@@ -47,5 +47,8 @@ public static class Util{
 		}
 		public static long modMul(long a, long b, long mod) {
 			return ((a%mod)*(b%mod))%mod;
+		}
+		public static void dbg(Object... o) { 
+			System.out.println(Arrays.deepToString(o)); 
 		}
 	}
