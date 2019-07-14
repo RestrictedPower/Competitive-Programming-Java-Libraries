@@ -15,7 +15,7 @@ My code lib for competitive programming
   
   # Util.java Class Contains:
   - An integer primality testing algorithm.
-  - A sieve function which returns an integer bitmap array with all the marked primes on it.
+  - A sieve function which returns a boolean array with all the marked primes on it.
   - A GCD algorithm (greatest common divisor)
   - A modAdd and a modMul algorithm. They can be used instead of addition and multiplication when the problem asks the answer to be printed MOD some value
   - An upper bound utility. This takes as a parameter an array and a value and returns the largest index i where (value >= a[i])
