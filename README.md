@@ -5,7 +5,9 @@ My code lib for competitive programming
 
   # Reader.java Class:
   - Fast and efficient way to read input from System.in.
-  - Supported data types are: Integers, Strings, Longs, Doubles and Integer Arrays.
+  
+  # Writer.java Class:
+  - Fast and efficient way to write output to System.out.
   
   # Graph.java Class Contains:
   - An Edge add system.
