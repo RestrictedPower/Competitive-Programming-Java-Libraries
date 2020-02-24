@@ -4,6 +4,13 @@ public class Writer {
 		pw = new PrintWriter(System.out);
 	}
 	
+	public Writer(){
+		try {
+			pw = new PrintWriter(new FileWriter("f"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	public void printArray(int[] a) {
 		for(int i = 0; i<a.length; i++) print(a[i]+" ");
 	}
