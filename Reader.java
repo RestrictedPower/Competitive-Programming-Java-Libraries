@@ -1,3 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
 public class Reader {
 	static BufferedReader br;
 	static StringTokenizer st;
@@ -15,6 +21,7 @@ public class Reader {
 			e.printStackTrace();
 		}
 	}
+	
 	public int[] na(int n) {
 		int[] a = new int[n];
 		for (int i = 0; i < n; i++)
