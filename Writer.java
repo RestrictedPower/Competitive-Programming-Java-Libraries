@@ -1,16 +1,21 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Writer {
 	private PrintWriter pw;
 	public Writer(){
 		pw = new PrintWriter(System.out);
 	}
 	
-	public Writer(){
+	public Writer(String f){
 		try {
-			pw = new PrintWriter(new FileWriter("f"));
+			pw = new PrintWriter(new FileWriter(f));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+	
 	public void printArray(int[] a) {
 		for(int i = 0; i<a.length; i++) print(a[i]+" ");
 	}
