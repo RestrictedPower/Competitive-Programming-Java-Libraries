@@ -7,7 +7,14 @@ public class Reader {
 	public Reader() {
 		this.br = new BufferedReader(new InputStreamReader(System.in));
 	}
-
+	
+	public Reader(String f){
+		try {
+			this.br = new BufferedReader(new FileReader(f));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	public int[] na(int n) {
 		int[] a = new int[n];
 		for (int i = 0; i < n; i++)
