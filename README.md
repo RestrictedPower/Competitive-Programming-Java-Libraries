@@ -19,8 +19,8 @@ My code lib for competitive programming
   - A GCD algorithm (greatest common divisor)
   - A ModInverse algorithm (using Euclid's gcd extended algorithm) to compute a^-1 % MOD 
   - An factorial initialization function.
-  - nCr and nPr algorithms (for mod values too), they both require factorial initialization before used.
-  - An upper bound utility. This takes as a parameter an array and a value and returns the largest index i where (value >= a[i])
+  - nCr and nPr algorithms (also for values % MOD), they both require factorial initialization before used.
+  - An upper bound utility. This takes as a parameter an array and a value and returns the smallest index i where (value > a[i])
   - A lower bound utility. This takes as a parameter an array and a value and returns the smallest index i where (value =< a[i])
   - Note: lower and higher bounds should be used on sorted arrays. They work as described even if the array contains duplicates.
   
