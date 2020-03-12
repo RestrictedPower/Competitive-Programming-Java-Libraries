@@ -52,29 +52,25 @@ public class Util{
 	        return true; 
 	    }
 		
-		public static int upperBound(long[] a, long v) {
-			int l=0, h=a.length-1, ans = -1;
-			while(l<h) {
-				int mid = (l+h)/2;
-				if(a[mid]<=v) {
-					ans = mid;
-					l = mid+1;
-				}else h = mid-1;
-			}
-			return ans;
-		}
-		
-		public static int lowerBound(long[] a, long v) {
-			int l=0, h=a.length-1, ans = -1;
-			while(l<h) {
-				int mid = (l+h)/2;
-				if(v<=a[mid]) {
-					ans = mid;
-					h = mid-1;
-				}else l = mid-1;
-			}
-			return ans;
-		}
+	    public static int lowerBound(int[] a, int v) {
+	    	int l = 0, h = a.length;
+	    	while(l<h) {
+	    		int mid = (l+h)/2;
+	    		if(v<=a[mid]) h = mid;
+	    		else l = mid+1;
+	    	}
+	    	return l;
+	    }
+	    
+	    public static int upperBound(int[] a, int v) {
+	    	int l = 0, h = a.length;
+	    	while(l<h) {
+	    		int mid = (l+h)/2;
+	    		if(a[mid]<=v) l = mid+1;
+	    		else h = mid;
+	    	}
+	    	return l;
+	    }
 		
 	    public static boolean[] getSieve(int n) {
 	        boolean[] isPrime = new boolean[n+1];
