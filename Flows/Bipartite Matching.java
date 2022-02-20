@@ -1,4 +1,4 @@
-	static class BipartiteMatching{
+static class BipartiteMatching{
 		final int source = 0, sink = 1;
 		Dinic d;
 		HashSet<Integer> added;
