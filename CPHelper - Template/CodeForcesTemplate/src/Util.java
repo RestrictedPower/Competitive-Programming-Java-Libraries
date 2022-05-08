@@ -28,7 +28,7 @@ public class Util{
 		
 		public static long modInverse(long a, long mod) {
 			long[] gcdE = gcdExtended(a, mod);
-			if (gcdE[0] != 1) return -1; // Inverted doesn't exist
+			if (gcdE[0] != 1) return -1; // Inverse doesn't exist
 			long x = gcdE[1];
 			return (x % mod + mod) % mod;
 		}
