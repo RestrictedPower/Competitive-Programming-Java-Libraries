@@ -18,7 +18,7 @@
 		
 		public int[] getTopSort() {
 			if(!run) throw new RuntimeException("Call run first!");
-			if(!possible) throw new RuntimeException("Graph is not bipartite!");
+			if(!possible) throw new RuntimeException("Graph is not DAG!");
 			return topSort;
 		}
 		
